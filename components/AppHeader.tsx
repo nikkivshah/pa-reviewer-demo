@@ -20,9 +20,6 @@ export function AppHeader({ children }: { children?: React.ReactNode }) {
             Audit log
           </Link>
         </nav>
-        <span className="hidden text-sm text-white/60 lg:inline">
-          Synthetic Health Plan · Medicare Advantage · Outpatient
-        </span>
         {children}
       </div>
       <div className="flex items-center gap-3">

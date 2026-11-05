@@ -150,12 +150,19 @@ Last verified: 18/18 criteria, 3/3 recommendations, 0 unverified quotes.
 
 ---
 
+## Deployment
+
+- Live: https://pa-reviewer-demo.vercel.app (Vercel, auto-deploys on push to `main`)
+- Repo: https://github.com/nikkivshah/pa-reviewer-demo
+- `ANTHROPIC_API_KEY` is set in Vercel project settings. API routes have `maxDuration = 60`.
+
+---
+
 ## Next steps
 
 1. Offline fallback: saved AI results in case the API is slow or down during a live demo.
 2. Visual click-through in a real browser and polish.
-3. Deploy to Vercel (`vercel --prod`). `next build` passes.
-4. Record a backup walkthrough video.
+3. Record a backup walkthrough video.
 
 ---
 
