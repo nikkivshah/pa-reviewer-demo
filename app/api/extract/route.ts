@@ -6,6 +6,9 @@ import { packetForPrompt, locateQuote, type QuotableDocument } from "@/lib/quote
 import { ExtractionSchema, THRESHOLDS, type ExtractedFact, type VerifiedExtraction, type VerifiedFact } from "@/lib/schemas";
 import { getCase } from "@/lib/synthetic-cases";
 
+// LLM calls take 10-20s; give Vercel functions headroom.
+export const maxDuration = 60;
+
 const SYSTEM = `You are a clinical documentation extraction assistant supporting prior authorization nurse reviewers at a Medicare Advantage health plan.
 
 Your job: pull structured clinical facts out of an unstructured referral packet so a reviewer can verify them quickly. The packet may contain several documents (fax cover, referral letter, encounter notes). Read all of them.

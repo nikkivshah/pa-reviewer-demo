@@ -10,6 +10,9 @@ import { locateQuote, packetForPrompt, type QuotableDocument } from "@/lib/quote
 import { matchingSchemaFor, THRESHOLDS, type VerifiedExtraction } from "@/lib/schemas";
 import { getCase } from "@/lib/synthetic-cases";
 
+// LLM calls take 10-20s; give Vercel functions headroom.
+export const maxDuration = 60;
+
 const SYSTEM = `You are a clinical criteria matching assistant supporting licensed prior authorization reviewers at a Medicare Advantage health plan.
 
 You compare documented clinical evidence against a fixed set of medical necessity criteria and prepare a summary a nurse reviewer can read in under a minute. The packet may contain several documents. Use all of them.
