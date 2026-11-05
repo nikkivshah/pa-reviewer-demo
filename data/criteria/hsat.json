@@ -1,0 +1,49 @@
+{
+  "id": "HSAT-DEMO",
+  "name": "Home Sleep Apnea Test",
+  "tier": "commercial_criteria",
+  "sourceName": "Synthetic criteria modeled on MCG outpatient guidance. Not licensed MCG content.",
+  "serviceLabel": "Unattended home sleep apnea test (HSAT)",
+  "cptCodes": ["95800", "95806", "G0399"],
+  "linesOfBusiness": ["Medicare Advantage"],
+  "setting": "outpatient",
+  "coverage": { "fullyEstablished": true },
+  "versions": [
+    {
+      "version": "v1",
+      "effectiveFrom": "2025-01-01",
+      "effectiveTo": null,
+      "approvalRule": "All 3 criteria must be met to be approval-ready. Anything else goes to a clinician.",
+      "note": "Home testing is the usual first test for adults with suspected uncomplicated OSA.",
+      "criteria": [
+        {
+          "id": "H1",
+          "title": "Clinical suspicion of obstructive sleep apnea",
+          "description": "At least 1 OSA symptom (habitual snoring, witnessed apneas, or excessive daytime sleepiness) AND a provider assessment that OSA is suspected.",
+          "evidenceRequired": "Documented symptom and the provider's assessment."
+        },
+        {
+          "id": "H2",
+          "title": "No condition that makes home testing inappropriate",
+          "description": "No documented significant cardiopulmonary disease, neuromuscular disease, chronic opioid use, or suspected non-OSA sleep disorder.",
+          "evidenceRequired": "Problem list and medication list reviewed by the provider."
+        },
+        {
+          "id": "H3",
+          "title": "Recent face-to-face evaluation",
+          "description": "A face-to-face clinical evaluation by the ordering provider within the past 6 months.",
+          "evidenceRequired": "Dated encounter note from the ordering provider."
+        }
+      ]
+    }
+  ],
+  "changeLog": [
+    {
+      "date": "2024-11-15",
+      "version": "v1",
+      "author": "A. Chen, RN, Clinical Policy",
+      "approvedBy": "M. Okafor, MD, Medical Policy",
+      "summary": "Initial set for home sleep apnea testing."
+    }
+  ]
+}

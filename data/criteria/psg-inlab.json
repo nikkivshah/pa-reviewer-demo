@@ -1,0 +1,119 @@
+{
+  "id": "PSG-INLAB-DEMO",
+  "name": "Attended In-Lab Polysomnography",
+  "tier": "commercial_criteria",
+  "sourceName": "Synthetic criteria modeled on MCG outpatient guidance. Not licensed MCG content.",
+  "serviceLabel": "Attended in-lab sleep study (polysomnography)",
+  "cptCodes": ["95810", "95811"],
+  "linesOfBusiness": ["Medicare Advantage"],
+  "setting": "outpatient",
+  "coverage": { "fullyEstablished": true },
+  "versions": [
+    {
+      "version": "v1",
+      "effectiveFrom": "2025-01-01",
+      "effectiveTo": "2025-12-31",
+      "approvalRule": "All 6 criteria must be met to be approval-ready. Anything else goes to a clinician.",
+      "note": "If the in-lab criteria are not met, a home sleep apnea test (HSAT) is usually the appropriate first test.",
+      "criteria": [
+        {
+          "id": "C1",
+          "title": "Clinical symptoms of obstructive sleep apnea",
+          "description": "At least 2 of the following 3 symptoms are documented: habitual snoring, witnessed apneas, excessive daytime sleepiness.",
+          "evidenceRequired": "Provider documentation of each symptom present."
+        },
+        {
+          "id": "C2",
+          "title": "STOP-BANG score of 3 or higher",
+          "description": "A STOP-BANG screening score of 3 or more out of 8 is documented.",
+          "evidenceRequired": "A recorded STOP-BANG score."
+        },
+        {
+          "id": "C3",
+          "title": "Standardized daytime sleepiness measure documented",
+          "description": "An Epworth Sleepiness Scale (or equivalent) score is recorded.",
+          "evidenceRequired": "An ESS score or equivalent instrument result."
+        },
+        {
+          "id": "C4",
+          "title": "Comorbidity that warrants an attended in-lab study",
+          "description": "Treatment-resistant hypertension (uncontrolled on 3 or more antihypertensives), congestive heart failure, coronary artery disease, prior stroke, or neuromuscular disease.",
+          "evidenceRequired": "Diagnosis of a qualifying condition."
+        },
+        {
+          "id": "C5",
+          "title": "Elevated BMI or anatomic airway risk",
+          "description": "BMI of 30 or higher, OR Mallampati class III or IV, OR neck circumference over 17 in.",
+          "evidenceRequired": "Documented BMI, Mallampati class, or neck circumference."
+        },
+        {
+          "id": "C6",
+          "title": "Non-pharmacologic counseling documented",
+          "description": "The provider documented counseling on non-drug interventions such as sleep hygiene, weight management, or positional therapy, and the patient participated.",
+          "evidenceRequired": "A note that counseling was given."
+        }
+      ]
+    },
+    {
+      "version": "v2",
+      "effectiveFrom": "2026-01-01",
+      "effectiveTo": null,
+      "approvalRule": "All 6 criteria must be met to be approval-ready. Anything else goes to a clinician.",
+      "note": "If the in-lab criteria are not met, a home sleep apnea test (HSAT) is usually the appropriate first test.",
+      "criteria": [
+        {
+          "id": "C1",
+          "title": "Clinical symptoms of obstructive sleep apnea",
+          "description": "At least 2 of the following 3 symptoms are documented: habitual snoring, witnessed apneas (pauses in breathing observed by a bed partner or other person), excessive daytime sleepiness.",
+          "evidenceRequired": "Provider documentation of each symptom present. Count how many of the three are explicitly documented."
+        },
+        {
+          "id": "C2",
+          "title": "STOP-BANG score of 3 or higher",
+          "description": "A STOP-BANG screening score of 3 or more out of 8 is documented, indicating intermediate to high risk for OSA.",
+          "evidenceRequired": "A recorded STOP-BANG score, or enough documented components to determine it."
+        },
+        {
+          "id": "C3",
+          "title": "Standardized daytime sleepiness measure documented",
+          "description": "A standardized sleepiness assessment (Epworth Sleepiness Scale or equivalent) has been administered and the score is recorded. Any score satisfies this criterion; the score itself is used for clinical context.",
+          "evidenceRequired": "An Epworth Sleepiness Scale (ESS) score or equivalent instrument result."
+        },
+        {
+          "id": "C4",
+          "title": "Comorbidity that warrants an attended in-lab study",
+          "description": "At least one condition that makes an unattended home test inappropriate: treatment-resistant hypertension (uncontrolled on 3 or more antihypertensive medications), congestive heart failure, coronary artery disease, prior stroke, or neuromuscular disease.",
+          "evidenceRequired": "Diagnosis of a qualifying condition. For hypertension, the medication list must show 3 or more antihypertensives with BP above goal."
+        },
+        {
+          "id": "C5",
+          "title": "Elevated BMI or anatomic airway risk",
+          "description": "BMI of 30 or higher, OR Mallampati class III or IV, OR large neck circumference (over 17 in / 43 cm for men, over 16 in / 40.5 cm for women).",
+          "evidenceRequired": "Documented BMI, Mallampati class, or neck circumference."
+        },
+        {
+          "id": "C6",
+          "title": "Non-pharmacologic counseling documented",
+          "description": "The provider documented counseling on non-drug interventions such as sleep hygiene, weight management, or positional therapy. Counseling counts even if the patient declined the intervention.",
+          "evidenceRequired": "A note that counseling was given, and the patient's response."
+        }
+      ]
+    }
+  ],
+  "changeLog": [
+    {
+      "date": "2024-11-15",
+      "version": "v1",
+      "author": "A. Chen, RN, Clinical Policy",
+      "approvedBy": "M. Okafor, MD, Medical Policy",
+      "summary": "Initial set for in-lab polysomnography."
+    },
+    {
+      "date": "2025-11-20",
+      "version": "v2",
+      "author": "A. Chen, RN, Clinical Policy",
+      "approvedBy": "Utilization Management Committee",
+      "summary": "C5: added a separate neck circumference threshold for women (over 16 in). C6: counseling now counts even if the patient declines. C1: defined witnessed apneas."
+    }
+  ]
+}

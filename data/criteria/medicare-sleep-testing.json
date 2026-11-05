@@ -1,0 +1,46 @@
+{
+  "id": "MEDICARE-SLEEP-TEST-DEMO",
+  "name": "Medicare Coverage: Sleep Testing for OSA",
+  "tier": "medicare_ncd_lcd",
+  "sourceName": "Synthetic stand-in for a Medicare National Coverage Determination (modeled on NCD 240.4.1 style). Not real CMS text.",
+  "serviceLabel": "Sleep testing for suspected obstructive sleep apnea (in-lab or home)",
+  "cptCodes": ["95800", "95806", "95810", "95811", "G0399"],
+  "linesOfBusiness": ["Medicare Advantage"],
+  "setting": "outpatient",
+  "coverage": {
+    "fullyEstablished": false,
+    "gapReason": "Covers sleep testing for beneficiaries with OSA signs and symptoms, but does not specify when an attended in-lab study is needed instead of a home test."
+  },
+  "versions": [
+    {
+      "version": "v1",
+      "effectiveFrom": "2024-01-01",
+      "effectiveTo": null,
+      "approvalRule": "Coverage gate only. Plan criteria supplement the setting decision.",
+      "note": "Medicare criteria come first for Medicare Advantage. Where they are not fully established, plans may use publicly posted, evidence-based internal or commercial criteria.",
+      "criteria": [
+        {
+          "id": "M1",
+          "title": "Signs and symptoms of OSA documented",
+          "description": "The beneficiary has clinical signs and symptoms indicative of obstructive sleep apnea.",
+          "evidenceRequired": "Provider documentation of OSA signs or symptoms."
+        },
+        {
+          "id": "M2",
+          "title": "Face-to-face clinical evaluation",
+          "description": "The test is ordered by the treating provider after a face-to-face clinical evaluation.",
+          "evidenceRequired": "Encounter note from the ordering provider."
+        }
+      ]
+    }
+  ],
+  "changeLog": [
+    {
+      "date": "2023-12-04",
+      "version": "v1",
+      "author": "Policy sync (CMS coverage feed)",
+      "approvedBy": "M. Okafor, MD, Medical Policy",
+      "summary": "Imported from the CMS coverage database."
+    }
+  ]
+}
